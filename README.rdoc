@@ -5,7 +5,7 @@ For more about Getclicky see http://getclicky.com.
 
 == Installation
 
-	gem install getclicky
+  gem install getclicky
 
 == Usage
 
@@ -13,20 +13,20 @@ For more about Getclicky see http://getclicky.com.
 
 First, you'll need to set up your site_id and sitekey. You can discover this information by accessing settings in your account at http://getclicky.com.
 
-	Getclicky.configure do |config|
-		config.site_id = "your site id here"
+  Getclicky.configure do |config|
+    config.site_id = "your site id here"
     config.sitekey = "your site key here"
   end
 
 Then you can simply instantiate a new Getclicky::Client object.
 
-	getclicky = Getclicky::Client.new
+  getclicky = Getclicky::Client.new
 
 === Usage
 
-	getClicky = Getclicky::Client.new 
+  getClicky = Getclicky::Client.new 
 		
-	getClicky.pages(:limit => 10, :date =>  "YYYY-MM-DD", :daily => 1, :hourly => 1, :item => google.com)
+  getClicky.pages(:limit => 10, :date =>  "YYYY-MM-DD", :daily => 1, :hourly => 1, :item => google.com)
 
 == Maintainer
 
