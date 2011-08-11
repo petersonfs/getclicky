@@ -2,20 +2,12 @@ require "spec_helper"
 
 describe Getclicky::Client do
   context "methods for request type" do
-    it "should implements pages" do
-      subject.should respond_to(:pages)
-    end
-    
-    it "should implements pages_entrance" do
-      subject.should respond_to(:pages_entrance)
-    end
-    
-    it "should implements pages_exit" do
-      subject.should respond_to(:pages_exit)
-    end
-    
-    it "should implements downloads" do
-      subject.should respond_to(:downloads)
+    Getclicky::Types::ALL.each do |type|
+      class_eval <<-RUBY, __FILE__, __LINE__  
+        it "should be implement #{type.to_s} method" do
+          subject.should respond_to(type)
+        end
+      RUBY
     end
   end
 end

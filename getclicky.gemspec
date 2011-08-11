@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Getclicky::Version::STRING
   s.authors     = ["Peterson Ferreira"]
   s.email       = ["petersonferreiras@gmail.com"]
-  s.homepage    = "github.com/petersonferreira/getclicky"
+  s.homepage    = "http://github.com/petersonferreira/getclicky"
   s.summary     = %q{Ruby Wrapper for GetClicky API Analytics}
   s.description = s.summary
   
@@ -15,9 +15,8 @@ Gem::Specification.new do |s|
   s.add_dependency "httparty"                 , "~> 0.7.8"
   s.add_development_dependency "rspec"        , "~> 2.6"
   s.add_development_dependency "test_notifier", "~> 0.3"
+  s.add_development_dependency "fakeweb"      , "~> 1.3"
   s.add_development_dependency "ruby-debug19" , "~> 0.11"
-
-  s.rubyforge_project = "getclicky"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

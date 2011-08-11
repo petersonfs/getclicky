@@ -6,6 +6,8 @@ require "getclicky"
 require "rspec"
 require "test_notifier/runner/rspec"
 
+FakeWeb.allow_net_connect = false
+
 Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each {|file| require file}
 
 RSpec.configure do |config|

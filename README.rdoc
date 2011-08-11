@@ -1,7 +1,6 @@
-= Getclicky Library
+= Getclicky API Analytics Library
 
-Getclicky client library to handle data in your account.
-For more about Getclicky see http://getclicky.com.
+A swiss knife ruby wrapper for Getclicky API Analytics. For more information see: http://getclicky.com/help/api.
 
 == Installation
 
@@ -23,14 +22,50 @@ Then you can simply instantiate a new Getclicky::Client object.
   getclicky = Getclicky::Client.new
 
 === Usage
+					
+All types in API are methods here looks, you can find all types http://getclicky.com/help/api:
 
-  getClicky = Getclicky::Client.new 
-		
-  getClicky.pages(:limit => 10, :date =>  "YYYY-MM-DD", :daily => 1, :hourly => 1, :item => google.com)
+  getClicky.pages()
 
+	getClicky.clicks()
+	
+	getClicky.tweets()
+	
+	getClicky.visitors()
+	
+In each method you can pass optional parameters as a hash looks:
+
+	getClicky.visitors(:date => "last-7-days", :daily => 1)
+	
+	getClicky.item(:date => "last-7-days", :item => "google.com")
+	
+	getClicky.visitors_list(:domain => "google.com")
+	
+By default getclicky API returns XML as data, but you can change adding :output in parameter like:
+
+===== JSON
+
+	getClicky.visitors(:output => "json", :date => "last-7-days", :daily => 1)
+	
+===== CSV
+
+	getClicky.visitors(:output => "csv", :date => "last-7-days", :daily => 1)
+	
+===== PHP
+
+	getClicky.visitors(:output => "php", :date => "last-7-days", :daily => 1)
+	
+	
+This library does't support multiple types yet.
+
+== Roadmap
+
+* Multiple types for request
+* Improve the tests
+	
 == Maintainer
 
-* Peterson Ferreira (http://refactoringever.com)
+* Peterson Ferreira (petersonferreiras@gmail.com)
 
 == License
 

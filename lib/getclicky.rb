@@ -1,3 +1,10 @@
+# Getclicky API Analytics Ruby Client Library
+#
+# Allows access to the getclicky.com Analytics API using the ruby programming language.
+#
+# Copyright (c) 2011+ Peterson Ferreira
+# See LICENSE for details
+#
 require "httparty"
 require "active_support/core_ext/object/to_param"
 require "active_support/core_ext/object/to_query"
@@ -15,9 +22,9 @@ module Getclicky
   autoload :Types   , "getclicky/types"
   autoload :Version , "getclicky/version"
   
-  class Getclicky::UnauthorizedError < StandardError; end
+  # Class implemented to abstract 404 errors.
+  #
   class Getclicky::NotFoundError < StandardError; end
-  class Getclicky::AbstractMethodError < StandardError; end
   
   class << self
     # Set the site_id that will do requests to the API.
@@ -31,7 +38,7 @@ module Getclicky
     attr_accessor :sitekey
   end
   
-  # Return the API endpoint of Getclicky
+  # API endpoint of Getclicky
   #
   def self.endpoint
     ENV.fetch("GETCLICKY_ENDPOINT", "http://api.getclicky.com/api/stats/4")

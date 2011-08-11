@@ -1,5 +1,15 @@
+# Getclicky API Analytics Ruby Client Library
+#
+# Allows access to the getclicky.com Analytics API using the ruby programming language.
+#
+# Copyright (c) 2011+ Peterson Ferreira
+# See LICENSE for details
+#
 module Getclicky
   module Types
+    
+    # Request types that the API accepts.
+    #
     ALL = [
       :pages,
       :pages_entrance,
