@@ -27,33 +27,33 @@ All types in API are methods here looks, you can find all types http://getclicky
 
   getClicky.pages()
 
-	getClicky.clicks()
+  getClicky.clicks()
 	
-	getClicky.tweets()
+  getClicky.tweets()
 	
-	getClicky.visitors()
+  getClicky.visitors()
 	
 In each method you can pass optional parameters as a hash looks:
 
-	getClicky.visitors(:date => "last-7-days", :daily => 1)
+  getClicky.visitors(:date => "last-7-days", :daily => 1)
 	
-	getClicky.item(:date => "last-7-days", :item => "google.com")
+  getClicky.item(:date => "last-7-days", :item => "google.com")
 	
-	getClicky.visitors_list(:domain => "google.com")
+  getClicky.visitors_list(:domain => "google.com")
 	
 By default getclicky API returns XML as data, but you can change adding :output in parameter like:
 
 ===== JSON
 
-	getClicky.visitors(:output => "json", :date => "last-7-days", :daily => 1)
+  getClicky.visitors(:output => "json", :date => "last-7-days", :daily => 1)
 	
 ===== CSV
 
-	getClicky.visitors(:output => "csv", :date => "last-7-days", :daily => 1)
+  getClicky.visitors(:output => "csv", :date => "last-7-days", :daily => 1)
 	
 ===== PHP
 
-	getClicky.visitors(:output => "php", :date => "last-7-days", :daily => 1)
+  getClicky.visitors(:output => "php", :date => "last-7-days", :daily => 1)
 	
 	
 This library does't support multiple types yet.
