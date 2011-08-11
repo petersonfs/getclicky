@@ -26,8 +26,6 @@ Then you can simply instantiate a new Getclicky::Client object.
 All types in API are methods here looks, you can find all types http://getclicky.com/help/api:
 
   getClicky.pages()
-
-  getClicky.clicks()
 	
   getClicky.tweets()
 	
