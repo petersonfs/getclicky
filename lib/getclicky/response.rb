@@ -1,20 +1,13 @@
-# Getclicky API Analytics Ruby Client Library
-#
-# Allows access to the getclicky.com Analytics API using the ruby programming language.
-#
-# Copyright (c) 2011+ Peterson Ferreira
-# See LICENSE for details
-#
 module Getclicky
   class Response    
-    attr_accessor :request
+    attr_accessor :item
     
-    def initializer(request)
-      @request = request
+    def initialize(item)
+      @item = item
     end
-    
+      
     def data
-      @request.body
+      @item.body
     end
   end
 end

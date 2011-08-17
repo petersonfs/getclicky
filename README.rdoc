@@ -26,32 +26,28 @@ Then you can simply instantiate a new Getclicky::Client object.
 All types in API are methods here looks, you can find all types http://getclicky.com/help/api:
 
   getClicky.pages()
-	
   getClicky.tweets()
-	
   getClicky.visitors()
 	
 In each method you can pass optional parameters as a hash looks:
 
   getClicky.visitors(:date => "last-7-days", :daily => 1)
-	
   getClicky.item(:date => "last-7-days", :item => "google.com")
-	
   getClicky.visitors_list(:domain => "google.com")
 	
 By default getclicky API returns XML as data, but you can change adding :output in parameter like:
 
 ===== JSON
 
-  getClicky.visitors(:output => "json", :date => "last-7-days", :daily => 1)
+  getClicky.visitors(:output => :json, :date => "last-7-days", :daily => 1)
 	
 ===== CSV
 
-  getClicky.visitors(:output => "csv", :date => "last-7-days", :daily => 1)
+  getClicky.visitors(:output => :csv, :date => "last-7-days", :daily => 1)
 	
 ===== PHP
 
-  getClicky.visitors(:output => "php", :date => "last-7-days", :daily => 1)
+  getClicky.visitors(:output => :php, :date => "last-7-days", :daily => 1)
 	
 	
 This library does't support multiple types yet.
@@ -64,26 +60,3 @@ This library does't support multiple types yet.
 == Maintainer
 
 * Peterson Ferreira (petersonferreiras@gmail.com)
-
-== License
-
-(The MIT License)
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -7,7 +7,7 @@ describe Getclicky do
       Getclicky.site_id.should == "123"
     end
     
-    it "should be set sitekey" do
+    it "should be set site_key" do
       Getclicky.configure { |c| c.sitekey = "123" }
       Getclicky.sitekey.should == "123"
     end
