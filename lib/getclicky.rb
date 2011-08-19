@@ -1,20 +1,8 @@
-# Getclicky API Analytics Ruby Client Library
-#
-# Allows access to the getclicky.com Analytics API using the ruby programming language.
-#
-# Copyright (c) 2011+ Peterson Ferreira
-# See LICENSE for details
-#
-require "httparty"
-require "active_support/core_ext/object/to_param"
-require "active_support/core_ext/object/to_query"
-require "active_support/inflector"
-require "active_support/core_ext/string/strip"
-require "active_support/core_ext/object/blank"
-
 # A Ruby class to call the Getclicky API Analytics.
 # You might use this if you want to see data of Getclicky in your application.
-#
+
+require "httparty"
+
 module Getclicky
   autoload :Client  , "getclicky/client"
   autoload :Request , "getclicky/request"
