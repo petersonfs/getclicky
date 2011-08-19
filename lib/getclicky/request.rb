@@ -24,7 +24,6 @@ module Getclicky
 
     # Build the hash of options for make resquest to API
     #
-    private
     def build_params(type, params = {})
       query = { :site_id => Getclicky.site_id, :sitekey => Getclicky.sitekey, :type => type }
       query.merge(params) if params
