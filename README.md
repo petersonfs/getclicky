@@ -6,7 +6,7 @@ A swiss knife ruby wrapper for Getclicky API Analytics. For more information see
 
 ``` ruby
 ## Gemfile for Rails 3, Sinatra, and Merb
-gem 'will_paginate', '~> 3.0'
+gem 'getclicky', '~> 0.1'
 ```
 
 
@@ -28,23 +28,21 @@ Then you can simply instantiate a new Getclicky::Client object.
 ``` ruby
 getclicky = Getclicky::Client.new
 ```
-
-### Usage
 					
 All types in API are methods here looks, you can find all types http://getclicky.com/help/api:
 
 ``` ruby
-getClicky.pages()
-getClicky.tweets()
-getClicky.visitors()
+getclicky.pages()
+getclicky.tweets()
+getclicky.visitors()
 ```
 	
 In each method you can pass optional parameters as a hash looks:
 
 ``` ruby
-getClicky.visitors(:date => "last-7-days", :daily => 1)
-getClicky.item(:date => "last-7-days", :item => "google.com")
-getClicky.visitors_list(:domain => "google.com")
+getclicky.visitors(:date => "last-7-days", :daily => 1)
+getclicky.item(:date => "last-7-days", :item => "google.com")
+getclicky.visitors_list(:domain => "google.com")
 ```
 	
 By default getclicky API returns XML as data, but you can change adding :output in parameter like:
@@ -52,22 +50,22 @@ By default getclicky API returns XML as data, but you can change adding :output 
 ##### JSON
 
 ``` ruby
-getClicky.visitors(:output => :json, :date => "last-7-days", :daily => 1)
+getclicky.visitors(:output => :json, :date => "last-7-days", :daily => 1)
 ```
 	
 ##### CSV
 
 ``` ruby
-  getClicky.visitors(:output => :csv, :date => "last-7-days", :daily => 1)
+getclicky.visitors(:output => :csv, :date => "last-7-days", :daily => 1)
 ```
 	
 ##### PHP
 
 ``` ruby
-  getClicky.visitors(:output => :php, :date => "last-7-days", :daily => 1)
+getclicky.visitors(:output => :php, :date => "last-7-days", :daily => 1)
 ```
 	
-This library does't support multiple types yet.
+Enjoy!
 
 ## Roadmap
 
