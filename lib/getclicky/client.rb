@@ -11,5 +11,11 @@ module Getclicky
         end                                                         # end
       RUBY
     end
+    
+    def multiple(types = [], params = {})
+      valid_types = types.reject { |t| !Getclicky::Types::ALL.include?(t.intern) }
+      response = Getclicky::Request.new(valid_types.join(','), params).get
+      response.data
+    end
   end
 end

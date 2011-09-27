@@ -24,6 +24,11 @@ module Getclicky
     # Will be required in every request.
     #
     attr_accessor :sitekey
+    
+    # Set the admin sitekey.
+    # Only used for certain requests.
+    #
+    attr_accessor :admin_sitekey
   end
   
   # API endpoint of Getclicky
