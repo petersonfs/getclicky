@@ -9,7 +9,6 @@ A swiss knife ruby wrapper for Getclicky API Analytics. For more information see
 gem 'getclicky', '~> 0.1'
 ```
 
-
 ## Usage
 
 ### Ruby wrapper
@@ -44,8 +43,14 @@ getclicky.visitors(:date => "last-7-days", :daily => 1)
 getclicky.item(:date => "last-7-days", :item => "google.com")
 getclicky.visitors_list(:domain => "google.com")
 ```
+
+You can also request more than one data type in a single request:
+
+``` ruby
+getclicky.multiple([:pages, :downloads], {:date => "last-7-days"})
+```
 	
-By default getclicky API returns XML as data, but you can change adding :output in parameter like:
+By default getclicky API returns an array of [Hashies](https://github.com/intridea/hashie) as data, but you can change by providing an :output parameter like:
 
 ##### JSON
 
