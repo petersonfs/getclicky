@@ -18,7 +18,7 @@ module Getclicky
       when "404"
         raise Getclicky::NotFoundError
       else
-        Getclicky::Response.new(response)
+        Getclicky::Response.new(response.parsed_response)
       end
     end
 
