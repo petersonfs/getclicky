@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Ruby Wrapper for GetClicky API Analytics}
   s.description = s.summary
 
-  s.add_dependency "httparty"                 , "~> 0.7.8"
+  s.add_dependency "httparty"                 , "~> 0.8.0"
   s.add_development_dependency "rspec"        , "~> 2.6"
   s.add_development_dependency "test_notifier", "~> 0.3"
   s.add_development_dependency "fakeweb"      , "~> 1.3"
