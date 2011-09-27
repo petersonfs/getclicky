@@ -2,7 +2,7 @@ require "hashie"
 
 module Getclicky
   class Response
-    attr_accessor :item
+    attr_accessor :item, :format
     
     class << self
       attr_accessor :mash_class
@@ -10,11 +10,16 @@ module Getclicky
     
     self.mash_class = ::Hashie::Mash
     
-    def initialize(item)
+    def initialize(item, format = nil)
       @item = item
+      @format = format
     end
       
     def data
+      @format.nil? ? mashify_data : @item
+    end
+    
+    def mashify_data
       if @item.size.eql?(1)
         parse(@item.first['dates'])
       elsif @item.size > 1
