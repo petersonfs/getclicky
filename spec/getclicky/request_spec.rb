@@ -1,7 +1,6 @@
 require "spec_helper"
 
 describe Getclicky::Request do
-  
   subject {
     Getclicky::Request.new(:pages, :limit => 10, :hourly => 1)
   }
