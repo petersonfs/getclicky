@@ -24,7 +24,7 @@ module Getclicky
         parse(@item.first['dates'])
       elsif @item.size > 1
         {}.tap do |results|
-          @item.collect { |r| results[r['type'].intern] = parse(r['dates']) }
+          @item.collect { |r| results[r['type'].gsub('-','_').intern] = parse(r['dates']) }
         end
       else
         @item
