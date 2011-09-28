@@ -19,7 +19,7 @@ First, you'll need to set up your site_id and sitekey. You can discover this inf
 Getclicky.configure do |config|
   config.site_id = "your site id here"
   config.sitekey = "your site key here"
-	config.admin_sitekey = "your admin site key, if applicable"
+  config.admin_sitekey = "your admin site key, if applicable"
 end
 ```
 
@@ -78,9 +78,7 @@ Enjoy!
 * Improve the tests
 	
 ## Author
-
-* Peterson Ferreira (refactoringever.com)
+* Peterson Ferreira ([refactoringever.com](refactoringever.com))
 
 ## Collaborators
-
-* Bobby Uhlenbrock (github.com/uhlenbrock)
+* Bobby Uhlenbrock ([github.com/uhlenbrock](github.com/uhlenbrock))
