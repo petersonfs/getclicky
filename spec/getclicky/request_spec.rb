@@ -34,4 +34,11 @@ describe Getclicky::Request do
       params.should == { :site_id => Getclicky.site_id, :sitekey => Getclicky.sitekey, :type => "bounce-rate", :output => :json }
     end
   end
+  
+  describe "request" do
+    before do
+      ENV["GETCLICKY_ENDPOINT"] = "http://example.com"
+      FakeWeb.register_uri :any, "http://example.com", :status => 200
+    end
+  end
 end

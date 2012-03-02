@@ -8,6 +8,10 @@ describe Getclicky::Client do
           subject.should respond_to(type)
         end
       RUBY
-    end    
+    end
+    
+    it "should be implement multiple method" do
+      subject.should respond_to("multiple")
+    end
   end
 end
