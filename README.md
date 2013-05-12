@@ -1,5 +1,7 @@
 # Getclicky API Analytics Library
 
+[![Build Status](https://travis-ci.org/petersonfs/getclicky.png)](https://travis-ci.org/petersonfs/getclicky)
+
 A swiss knife ruby wrapper for Getclicky API Analytics. For more information see: http://getclicky.com/help/api.
 
 ## Installation
