@@ -11,11 +11,11 @@ Gem::Specification.new do |s|
   s.summary     = %q{Ruby Wrapper for GetClicky API Analytics}
   s.description = s.summary
 
-  s.add_dependency "hashie"                   , "~> 1.2.0"
-  s.add_development_dependency "rspec"        , "~> 2.8"
+  s.add_dependency "hashie"                   , "~> 2.0.5"
+  s.add_development_dependency "rspec"        , "~> 2.13.0"
   s.add_development_dependency "test_notifier", "~> 1.0.0"
   s.add_development_dependency "fakeweb"      , "~> 1.3.0"
-  s.add_development_dependency "ruby-debug19" , "~> 0.11"
+  s.add_development_dependency "pry"          , "~> 0.9.12.2"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

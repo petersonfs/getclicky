@@ -5,8 +5,8 @@ A swiss knife ruby wrapper for Getclicky API Analytics. For more information see
 ## Installation
 
 ``` ruby
-## Gemfile for Rails 3, Sinatra, and Merb
-gem 'getclicky', '~> 0.1'
+## Gemfile for Rails, Sinatra
+gem 'getclicky', '~> 0.1.3'
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ Then you can simply instantiate a new Getclicky::Client object.
 ``` ruby
 getclicky = Getclicky::Client.new
 ```
-					
+
 All types in API are methods here looks, you can find all types http://getclicky.com/help/api:
 
 ``` ruby
@@ -36,7 +36,7 @@ getclicky.pages()
 getclicky.tweets()
 getclicky.visitors()
 ```
-	
+
 In each method you can pass optional parameters as a hash looks:
 
 ``` ruby
@@ -50,7 +50,7 @@ You can also request more than one data type in a single request:
 ``` ruby
 getclicky.multiple([:pages, :downloads], {:date => "last-7-days"})
 ```
-	
+
 By default getclicky API returns an array of [Hashies](https://github.com/intridea/hashie) as data, but you can change by providing an :output parameter like:
 
 ##### JSON
@@ -58,27 +58,27 @@ By default getclicky API returns an array of [Hashies](https://github.com/intrid
 ``` ruby
 getclicky.visitors(:output => :json, :date => "last-7-days", :daily => 1)
 ```
-	
+
 ##### CSV
 
 ``` ruby
 getclicky.visitors(:output => :csv, :date => "last-7-days", :daily => 1)
 ```
-	
+
 ##### PHP
 
 ``` ruby
 getclicky.visitors(:output => :php, :date => "last-7-days", :daily => 1)
 ```
-	
+
 Enjoy!
 
 ## Roadmap
 
 * Improve the tests
-	
+
 ## Author
-* Peterson Ferreira ([refactoringever.com](refactoringever.com))
+* Peterson Ferreira ([petersonfs.me](petersonfs.me))
 
 ## Collaborators
 * Bobby Uhlenbrock ([github.com/uhlenbrock](github.com/uhlenbrock))
