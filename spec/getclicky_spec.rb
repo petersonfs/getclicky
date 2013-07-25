@@ -11,6 +11,11 @@ describe Getclicky do
       Getclicky.configure { |c| c.sitekey = "123" }
       Getclicky.sitekey.should == "123"
     end
+    
+    it "should be set admin_sitekey" do
+      Getclicky.configure { |c| c.admin_sitekey = "123" }
+      Getclicky.admin_sitekey.should == "123"
+    end
   end
   
   describe "endpoint" do
@@ -20,8 +25,8 @@ describe Getclicky do
     end
     
     it "should be changes the url" do
-      ENV["GETCLICKY_ENDPOINT"] = "http://getclicky.com"
-      Getclicky.endpoint.should == "http://getclicky.com"
+      ENV["GETCLICKY_ENDPOINT"] = "http://api.getclicky.com/api/stats/4"
+      Getclicky.endpoint.should == "http://api.getclicky.com/api/stats/4"
     end
   end
 end

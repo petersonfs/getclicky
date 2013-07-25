@@ -12,6 +12,9 @@ module Getclicky
       RUBY
     end
     
+    # Retrieves a request with lot of parameters
+    # See documentation for more info
+    #
     def multiple(types = [], params = {})
       valid_types = types.reject { |t| !Getclicky::Types::ALL.include?(t.intern) }
       response = Getclicky::Request.new(valid_types.join(','), params).get

@@ -1,7 +1,6 @@
 require "spec_helper"
 
 describe Getclicky::Response do
-  
   subject {
     Getclicky::Response.new([{
       "type"=>"pages",
