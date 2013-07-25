@@ -1,4 +1,5 @@
 require "hashie"
+require "json"
 
 module Getclicky
   class Response
@@ -20,11 +21,12 @@ module Getclicky
     end
     
     def mashify_data
-      if @item.size.eql?(1)
-        parse(@item.first['dates'])
-      elsif @item.size > 1
+      json = @item.is_a?(String) ? JSON.parse(@item) : @item
+      if json.size.eql?(1)
+        parse(json.first['dates'])
+      elsif json.size > 1
         {}.tap do |results|
-          @item.collect { |r| results[r['type'].intern] = parse(r['dates']) }
+          json.collect { |r| results[r['type'].gsub('-','_').intern] = parse(r['dates']) }
         end
       else
         @item

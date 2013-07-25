@@ -27,7 +27,7 @@ module Getclicky
     #
     def build_url
       uri = URI.parse(Getclicky.endpoint)
-      uri.query = URI.encode_www_form(build_params(@type, @params))
+      uri.query = Getclicky::Encode.encode(build_params(@type, @params))
       uri
     end
 
