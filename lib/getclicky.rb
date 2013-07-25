@@ -3,6 +3,7 @@
 
 module Getclicky
   autoload :Client  , "getclicky/client"
+  autoload :Encode  , "getclicky/encode"
   autoload :Request , "getclicky/request"
   autoload :Response, "getclicky/response"
   autoload :Types   , "getclicky/types"
