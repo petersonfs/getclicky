@@ -6,15 +6,14 @@ Gem::Specification.new do |s|
   s.version     = Getclicky::Version::STRING
   s.authors     = ["Peterson Ferreira"]
   s.email       = ["petersonferreiras@gmail.com"]
-  s.homepage    = "http://github.com/petersonferreira/getclicky"
-  s.summary     = %q{Ruby Wrapper for GetClicky API Analytics}
+  s.homepage    = "http://github.com/petersonfs/getclicky"
+  s.summary     = %q{Ruby Wrapper for Clicky Analytics API}
   s.description = s.summary
 
-  s.add_dependency "hashie"                   , "~> 2.0.5"
-  s.add_development_dependency "rspec"        , "~> 2.13.0"
-  s.add_development_dependency "test_notifier", "~> 1.0.0"
-  s.add_development_dependency "fakeweb"      , "~> 1.3.0"
-  s.add_development_dependency "pry"          , "~> 0.9.12.2"
+  s.add_dependency "hashie"              , "~> 3.3.1"
+  s.add_development_dependency "rspec"   , "~> 3.0.0"
+  s.add_development_dependency "fakeweb" , "~> 1.3.0"
+  s.add_development_dependency "pry"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
