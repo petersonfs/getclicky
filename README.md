@@ -1,22 +1,21 @@
-# Getclicky API Analytics Library
+# Clicky Analytics API Library
 
+[![Build Status](https://travis-ci.org/petersonfs/getclicky.svg?branch=master)](https://travis-ci.org/petersonfs/getclicky)
 
-[![Build Status](https://travis-ci.org/petersonfs/getclicky.png?branch=master)](https://travis-ci.org/petersonfs/getclicky)
-
-A swiss knife ruby wrapper for Getclicky API Analytics. For more information see: http://getclicky.com/help/api.
+A swiss knife ruby wrapper for Clicky Analytics API. For more information see: http://clicky.com/help/api.
 
 ## Installation
 
 ``` ruby
 ## Gemfile for Rails, Sinatra
-gem 'getclicky', '~> 0.1.3'
+gem 'getclicky', '~> 0.1.4'
 ```
 
 ## Usage
 
 ### Ruby wrapper
 
-First, you'll need to set up your site_id and sitekey. You can discover this information by accessing settings in your account at http://getclicky.com.
+First, you'll need to set up your site_id and sitekey. You can discover this information by accessing settings in your account at http://clicky.com.
 
 ``` ruby
 Getclicky.configure do |config|
@@ -32,7 +31,7 @@ Then you can simply instantiate a new Getclicky::Client object.
 getclicky = Getclicky::Client.new
 ```
 
-All types in API are methods here looks, you can find all types http://getclicky.com/help/api:
+All types in API are methods here looks, you can find all types http://clicky.com/help/api:
 
 ``` ruby
 getclicky.pages()
@@ -54,7 +53,7 @@ You can also request more than one data type in a single request:
 getclicky.multiple([:pages, :downloads], {:date => "last-7-days"})
 ```
 
-By default getclicky API returns an array of [Hashies](https://github.com/intridea/hashie) as data, but you can change by providing an :output parameter like:
+By default clicky API returns an array of [Hashies](https://github.com/intridea/hashie) as data, but you can change by providing an :output parameter like:
 
 ##### JSON
 
@@ -62,16 +61,10 @@ By default getclicky API returns an array of [Hashies](https://github.com/intrid
 getclicky.visitors(:output => :json, :date => "last-7-days", :daily => 1)
 ```
 
-##### CSV
+##### XML
 
 ``` ruby
-getclicky.visitors(:output => :csv, :date => "last-7-days", :daily => 1)
-```
-
-##### PHP
-
-``` ruby
-getclicky.visitors(:output => :php, :date => "last-7-days", :daily => 1)
+getclicky.visitors(:output => :xml, :date => "last-7-days", :daily => 1)
 ```
 
 Enjoy!
