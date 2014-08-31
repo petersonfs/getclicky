@@ -1,9 +1,7 @@
 require "spec_helper"
 
 describe Getclicky::Response do
-  
   context "when initialized with an Array" do
-    
     subject {
       Getclicky::Response.new([{
         "type"=>"pages",
@@ -25,21 +23,18 @@ describe Getclicky::Response do
           ]
         }])
     }
-  
-    its(:item) { should be_an_instance_of Array }
-    its(:data) { should be_an_instance_of Array }
-  
-  
+
+    # its(:item) { should be_an_instance_of Array }
+    # its(:data) { should be_an_instance_of Array }
+
     it "should return an array of Hashie objects" do
       subject.data.each do |d|
-        d.should be_an_instance_of Hashie::Mash
+        expect(d).to be_an_instance_of Hashie::Mash
       end
     end
-    
   end
 
   context "when initialized with a String" do
-    
     subject {
       Getclicky::Response.new("[{\"type\":\"pages\",
         \"dates\":[
@@ -51,17 +46,14 @@ describe Getclicky::Response do
           ]}
         ]")
     }
-  
-    its(:item) { should be_an_instance_of String }
-    its(:data) { should be_an_instance_of Array }
-  
-  
+
+    # its(:item) { should be_an_instance_of String }
+    # its(:data) { should be_an_instance_of Array }
+
     it "should return an array of Hashie objects" do
       subject.data.each do |d|
-        d.should be_an_instance_of Hashie::Mash
+        expect(d).to be_an_instance_of Hashie::Mash
       end
     end
-    
   end
-  
 end
