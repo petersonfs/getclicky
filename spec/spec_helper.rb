@@ -1,12 +1,9 @@
-require 'coveralls'
+require "coveralls"
 Coveralls.wear!
-
-require "bundler"
-Bundler.setup(:default, :development)
-Bundler.require(:default, :development)
 
 require "getclicky"
 require "rspec"
+require "fakeweb"
 
 FakeWeb.allow_net_connect = false
 
