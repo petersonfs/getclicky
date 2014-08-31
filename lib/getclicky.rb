@@ -33,7 +33,7 @@ module Getclicky
   # API endpoint of Getclicky
   #
   def self.endpoint
-    ENV.fetch("GETCLICKY_ENDPOINT", "http://api.getclicky.com/api/stats/4")
+    ENV.fetch("GETCLICKY_ENDPOINT", "http://api.clicky.com/api/stats/4")
   end
 
   # Yield Getclicky module so you can easily configure options
