@@ -1,6 +1,9 @@
 # Clicky Analytics API Library
 
+[![Gem Version](https://badge.fury.io/rb/getclicky.svg)](http://badge.fury.io/rb/getclicky)
 [![Build Status](https://travis-ci.org/petersonfs/getclicky.svg?branch=master)](https://travis-ci.org/petersonfs/getclicky)
+[![Code Climate](https://codeclimate.com/github/petersonfs/getclicky/badges/gpa.svg)](https://codeclimate.com/github/petersonfs/getclicky)
+[![Test Coverage](https://codeclimate.com/github/petersonfs/getclicky/badges/coverage.svg)](https://codeclimate.com/github/petersonfs/getclicky)
 
 A swiss knife ruby wrapper for Clicky Analytics API. For more information see: http://clicky.com/help/api.
 
